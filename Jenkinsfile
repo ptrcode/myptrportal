@@ -8,7 +8,7 @@ pipeline {
     }
     stage('updateJira') {
       steps {
-        jiraGetIssueTransitions '$JIRA_ISSUE_KEY'
+        jiraGetIssueTransitions(idOrKey: '$JIRA_ISSUE_KEY', site: 'http://10.10.10.50:8080/')
       }
     }
   }

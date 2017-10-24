@@ -6,9 +6,9 @@ pipeline {
         echo 'verified resource'
       }
     }
-    stage('Create VM') {
+    stage('updateJira') {
       steps {
-        build(job: 'processjiraevents', quietPeriod: 1, propagate: true, wait: true)
+        jiraGetIssueTransitions '$JIRA_ISSUE_KEY'
       }
     }
   }

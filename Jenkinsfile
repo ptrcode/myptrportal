@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('mygroup') {
       parallel {
-        stage('mygroup') {
+        stage('Provision') {
           steps {
             echo 'verified resource'
             sh 'echo papu'
@@ -13,7 +13,7 @@ pipeline {
             bat 'ssss'
           }
         }
-        stage('') {
+        stage('network') {
           steps {
             echo 'assss'
             echo 'ssdsd'

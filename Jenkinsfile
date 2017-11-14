@@ -1,11 +1,25 @@
 pipeline {
   agent none
   stages {
-    stage('verify') {
-      steps {
-        echo 'verified resource'
-        sh 'echo papu'
-        echo 'ssss'
+    stage('mygroup') {
+      parallel {
+        stage('mygroup') {
+          steps {
+            echo 'verified resource'
+            sh 'echo papu'
+            echo 'ssss'
+            echo 'ssss'
+            sh 'ssss'
+            bat 'ssss'
+          }
+        }
+        stage('') {
+          steps {
+            echo 'assss'
+            echo 'ssdsd'
+            sleep 566
+          }
+        }
       }
     }
     stage('updateJira') {

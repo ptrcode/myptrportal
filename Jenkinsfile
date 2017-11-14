@@ -4,6 +4,8 @@ pipeline {
     stage('verify') {
       steps {
         echo 'verified resource'
+        sh 'echo papu'
+        echo 'ssss'
       }
     }
     stage('updateJira') {

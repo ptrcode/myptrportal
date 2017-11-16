@@ -20,6 +20,12 @@ pipeline {
             sleep 566
           }
         }
+        stage('') {
+          agent any
+          steps {
+            echo 'sdddd'
+          }
+        }
       }
     }
     stage('updateJira') {
